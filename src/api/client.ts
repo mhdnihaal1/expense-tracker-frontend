@@ -1,11 +1,15 @@
 import Constants from 'expo-constants';
 import { Platform } from 'react-native';
 
-// Resolve the API URL: explicit env var, else the same host that serves the Expo bundle
-// (works for simulators, emulators and Expo Go on a phone on the same Wi-Fi).
+// The deployed API on Render, used by production builds (Vercel web, release apps).
+const PRODUCTION_API_URL = 'https://expense-tracker-backend.onrender.com/api';
+
+// Resolve the API URL: explicit env var, else the deployed API in production builds,
+// else the same host that serves the Expo bundle (simulators, emulators, Expo Go on the same Wi-Fi).
 function resolveBaseUrl() {
   const fromEnv = process.env.EXPO_PUBLIC_API_URL;
   if (fromEnv) return fromEnv.replace(/\/$/, '');
+  if (!__DEV__) return PRODUCTION_API_URL;
   if (Platform.OS === 'web' && typeof window !== 'undefined') {
     return `${window.location.protocol}//${window.location.hostname}:4000/api`;
   }
