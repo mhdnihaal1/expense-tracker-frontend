@@ -3,7 +3,7 @@
 The **React Native (Expo SDK 57)** client for Spendwise, a personal finance app. It runs on iOS, Android and web.
 It needs the API from **[expense-tracker-backend](https://github.com/mhdnihaal1/expense-tracker-backend)**.
 
-**Live web app:** https://expense-tracker-frontend-beryl-psi.vercel.app (hosted on Vercel) · **API:** https://expense-tracker-backend.onrender.com/api (hosted on Render)
+**Live web app:** https://expense-tracker-frontend-beryl-psi.vercel.app (hosted on Vercel) · **API:** https://expense-tracker-backend-it81.onrender.com/api (hosted on Render)
 
 ![App icon on iOS, Android, themed Android, splash and web](docs/screenshots/app-icon.png)
 
@@ -38,7 +38,7 @@ npm install
 npx expo start          # i = iOS simulator, a = Android emulator, w = web, or scan the QR with Expo Go
 ```
 
-**API URL:** production builds (Vercel and release apps) call the deployed API at `https://expense-tracker-backend.onrender.com/api`. In development (`npx expo start`) the app calls port 4000 on the machine serving the Expo bundle, so a phone on the same Wi-Fi works without setup. To override either, set `EXPO_PUBLIC_API_URL` in `.env` (see `.env.example`).
+**API URL:** production builds (Vercel and release apps) call the deployed API at `https://expense-tracker-backend-it81.onrender.com/api`. In development (`npx expo start`) the app calls port 4000 on the machine serving the Expo bundle, so a phone on the same Wi-Fi works without setup. To override either, set `EXPO_PUBLIC_API_URL` in `.env` (see `.env.example`).
 
 **Deploying the web app:** `vercel.json` builds with `npx expo export --platform web` and serves `dist/` as a single-page app.
 

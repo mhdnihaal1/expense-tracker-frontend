@@ -2,7 +2,7 @@ import Constants from 'expo-constants';
 import { Platform } from 'react-native';
 
 // The deployed API on Render, used by production builds (Vercel web, release apps).
-const PRODUCTION_API_URL = 'https://expense-tracker-backend.onrender.com/api';
+const PRODUCTION_API_URL = 'https://expense-tracker-backend-it81.onrender.com/api';
 
 // Resolve the API URL: explicit env var, else the deployed API in production builds,
 // else the same host that serves the Expo bundle (simulators, emulators, Expo Go on the same Wi-Fi).
