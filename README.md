@@ -59,4 +59,6 @@ src/
   hooks/use-api.ts     fetch, refetch on focus, refetch after mutations
   theme/tokens.ts      light/dark palettes, spacing, typography
 assets/                app icon, splash and adaptive Android icons
+  source/make-icons.js regenerates every icon (node assets/source/make-icons.js)
+public/                web home-screen icons and manifest.json (copied into the web build)
 ```
